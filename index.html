@@ -1,0 +1,24 @@
+<style>
+* {
+  font-family: monospace;
+}
+</style>
+
+<h1>TH1RTEEN</h1>
+<p>If this works, it can't get blocked. Wish me luck.</p>
+
+<script>
+        function switchUrl() {
+            const urlWithoutParams = window.location.pathname;
+            window.history.replaceState({}, document.title, "https://google.com");
+        }
+          window.onload = function() {
+            switchUrl();
+          }
+window.addEventListener('beforeunload', function (e) {
+  // Cancel the event
+  e.preventDefault(); // If you prevent default behavior in Mozilla Firefox prompt will always be shown
+  // Chrome requires returnValue to be set
+  e.returnValue = '';
+});
+</script>
